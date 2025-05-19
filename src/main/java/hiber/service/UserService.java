@@ -9,11 +9,9 @@ import java.util.List;
 public interface UserService {
     void add(User user);
 
-    @Transactional
     void add(User user, Car car);
 
     List<User> listUsers();
 
-    @Transactional(readOnly = true)
     User getUserByCarModelAndSeries(String model, int series);
 }
